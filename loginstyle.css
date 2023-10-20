@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Crimson Text", serif;
+}
+
+body {
+  background-color: rgb(40, 42, 58);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100vh;
+}
+main {
+  display: flex;
+  max-width: 1000px;
+  height: 500px;
+  -webkit-box-shadow: 0px 0px 100px 24px rgba(226, 219, 218, 0.4);
+  -moz-box-shadow: 0px 0px 100px 24px rgba(226, 219, 218, 0.4);
+  box-shadow: 0px 0px 100px 24px rgba(226, 219, 218, 0.4);
+}
+.image {
+  width: 100%;
+  height: 100%;
+}
+.image > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+#login-form {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(226, 219, 218, 0.8);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+hr {
+  width: 90%;
+  margin: 10px auto;
+  border: 1px solid black;
+}
+form {
+  width: 80%;
+  height: auto;
+  text-align: center;
+}
+
+h1 {
+  margin: 10px auto;
+}
+#username,
+#password {
+  text-align: left;
+  margin: 10px auto;
+  width: 100%;
+}
+input {
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+#eisodos {
+  width: 70%;
+  height: 40px;
+  border-radius: 20px;
+  margin: 10px auto;
+}
+.icons {
+  background-color: transparent;
+  border: none;
+  margin: 10px auto;
+}
+#remember {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+#check {
+  width: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  .image {
+    display: none;
+  }
+  main {
+    height: 100vh;
+  }
+  #login-form {
+    width: 100vw;
+    height: 100vh;
+  }
+}

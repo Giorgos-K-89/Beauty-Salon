@@ -1,0 +1,248 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: large;
+  font-family: "Crimson Text", serif;
+}
+
+body {
+  background-color: rgba(226, 219, 218, 0.8);
+}
+#navbar {
+  display: flex;
+  width: auto;
+  background-color: black;
+  text-align: center;
+  justify-content: center;
+}
+.div-menu {
+  width: 50%;
+  height: 100px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+#nav-container img {
+  object-fit: contain;
+  height: 100px;
+  width: auto;
+}
+.topnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  width: 100%;
+}
+#nav-container a:not(:last-child) {
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  color: rgb(210, 210, 210);
+}
+
+.hover-animation::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(198, 151, 73);
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+  transform: scaleX(0);
+}
+
+.hover-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.div-menu,
+.appointment {
+  display: none;
+  /* display: flex;
+  align-items: center; */
+}
+
+.rantevou {
+  background-color: rgb(198, 151, 73);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 20%;
+  transform: skew(-40deg);
+}
+.rantevou > a {
+  color: black;
+  text-decoration: none;
+  transform: skew(40deg);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 80%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px auto;
+  gap: 30px;
+}
+h1 {
+  font-size: 2rem;
+}
+hr {
+  width: 100px;
+  border: 1px solid rgb(198, 151, 73);
+  margin: auto;
+}
+.moto {
+  color: rgb(198, 151, 73);
+  font-size: 1.5rem;
+}
+#photo-grid {
+  display: grid;
+  grid-template: 400px 300px 300px 300px/1fr 1fr 1fr;
+  gap: 5px;
+}
+#photo-grid img {
+  object-fit: cover;
+  height: 100%;
+  border-radius: 20px;
+}
+#img3 {
+  grid-row: span 2;
+}
+#img6 {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+#img2 {
+  grid-row: span 2;
+}
+#footer {
+  /* height: 150px; */
+  display: flex;
+  align-items: center;
+  background-color: black;
+  justify-content: space-around;
+}
+
+#logo {
+  object-fit: contain;
+  height: 100px;
+  width: auto;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: rgb(115, 95, 50);
+  cursor: pointer;
+}
+.footer-flex {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  justify-content: space-around;
+  width: 90%;
+}
+
+#icons-row {
+  display: flex;
+  gap: 70px;
+  color: rgb(115, 95, 50);
+  cursor: pointer;
+}
+
+i:hover {
+  color: rgb(198, 151, 73);
+}
+#footer .developer {
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  color: rgb(210, 210, 210);
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .footer-flex {
+    flex-direction: column;
+  }
+  .footer-flex p,
+  .footer-flex a {
+    font-size: 0.8rem;
+  }
+  #icons-row {
+    padding: 10px;
+    margin: 10px;
+  }
+  #logo {
+    border-bottom: 1px solid rgb(198, 151, 73);
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  div .rantevou {
+    display: none;
+  }
+  .div-menu {
+    display: flex;
+    align-items: center;
+  }
+  .div-menu .icon {
+    color: rgb(198, 151, 73);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topnav.responsive {
+    display: block;
+    position: relative;
+  }
+
+  .topnav.responsive a {
+    margin: 5px;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  * {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  #photo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #photo-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in</title>
+    <link rel="stylesheet" href="loginstyle.css" />
+    <script
+      src="https://kit.fontawesome.com/cf7e7d567b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="image">
+        <img src="images/login.jpg" />
+      </div>
+      <div id="login-form">
+        <form>
+          <h1>Είσοδος</h1>
+
+          <hr />
+          <div id="username">
+            <label for="user"> Username</label><br />
+            <input type="text" id="user" placeholder="username" />
+          </div>
+          <div id="password">
+            <label for="pass">Password</label><br />
+            <input type="password" id="pass" placeholder="password" />
+          </div>
+          <div id="remember">
+            <input id="check" type="checkbox" />
+            <div>Remember me</div>
+          </div>
+          <button id="eisodos">ΕΙΣΟΔΟΣ</button>
+          <hr />
+          - or - <br />
+          <button class="icons"><img src="images/googleicon.png" /></button>
+          <button class="icons"><img src="images/fbicon.png" /></button><br />
+          If you don't have an account -
+          <a href="">Sign up</a>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
