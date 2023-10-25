@@ -19,15 +19,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <nav id="navbar">
       <div class="topnav" id="nav-container">
         <a href="index.html"><img src="images/logo.png" width="500px" /></a>
-        <a class="hover-animation" href="index.html#services">SERVICES</a>
-        <a class="hover-animation" href="#products">PRODUCTS</a>
-        <a class="hover-animation" href="works.html">WORKS</a>
-        <a class="hover-animation" href="index.html#contact">CONTACT</a>
+        <a class="hover-animation" href="#about">Αξίες</a>
+        <a class="hover-animation" href="#us">Γιατί Εμάς</a>
+        <a class="hover-animation" href="index.html#services">Υπηρεσίες</a>
+        <a class="hover-animation" href="#works">Δουλειές μας</a>
+        <a class="hover-animation" href="index.html#contact">Επικοινωνία</a>
         <a class="hover-animation appointment" href="login.html"
           >ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a
         >
@@ -77,6 +83,56 @@
       </header>
     </section>
 
+    <section id="about">
+      <div class="about-header">
+        <h1>Η Επιχείρηση</h1>
+        <hr />
+        <h2>ΑΞΙΕΣ</h2>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-image img1"></div>
+          <h2>Πελάτης</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque
+            minima at optio. Sit architecto, magnam accusantium eligendi ex,
+            ratione voluptate minus dolor quis nostrum nesciunt veniam debitis,
+            quos facilis mollitia.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-image img2"></div>
+          <h2>Υπηρεσίες</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores
+            autem ipsa doloremque, vitae, id eius dolore voluptatum pariatur
+            totam nobis sit distinctio molestiae fugiat. Delectus numquam quod
+            ad! Odit, facere?
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-image img3"></div>
+          <h2>Προσωπικό</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+            fugiat fugit quos, et minus facilis odio debitis modi perferendis
+            nesciunt blanditiis incidunt. Ullam eveniet placeat sed earum quam
+            libero cupiditate!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="us">
+      <div id="circle">
+        <div class="circle-intro">
+          <h1>Γιατι να επιλέξετε εμάς</h1>
+          <hr />
+          <h2>Για εμάς είστε πάντα στο επίκεντρο</h2>
+        </div>
+      </div>
+    </section>
+
     <section id="services">
       <div class="services-intro">
         <h1>SERVICES</h1>
@@ -113,6 +169,65 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section id="works">
+      <div id="works-intro">
+        <h1>Δουλειές μας</h1>
+        <hr />
+        <h2>Η δουλειά μας μιλά για εμάς!</h2>
+      </div>
+      <section class="slider_container">
+        <div class="container">
+          <div class="swiper card_slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="img-box">
+                  <img src="/images/works/hair1.jpg" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-box">
+                  <img src="/images/works/hair2.jpg" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-box">
+                  <img src="/images/works/hair3.jpg" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-box">
+                  <img src="/images/works/hair4.jpg" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-box">
+                  <img src="/images/works/hair5.jpg" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-box">
+                  <img src="/images/works/hair7.jpg" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-box">
+                  <img src="/images/works/hair8.jpg" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-box">
+                  <img src="/images/works/kopela5.jpg" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
     </section>
 
     <section id="contact">
@@ -202,6 +317,8 @@
     <button onclick="topFunction()" id="myBtn" title="Go to top">
       <i class="fa-solid fa-circle-arrow-up fa-2xl"></i>
     </button>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

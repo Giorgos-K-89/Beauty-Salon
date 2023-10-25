@@ -26,15 +26,15 @@ h3 {
   color: rgb(198, 151, 73);
 }
 
-.brand {
-  color: rgb(198, 151, 73);
-}
-
 a {
   cursor: pointer;
   text-decoration: none;
   position: relative;
   color: rgb(210, 210, 210);
+}
+
+.brand {
+  color: rgb(198, 151, 73);
 }
 
 .hover-animation::after {
@@ -56,7 +56,7 @@ a {
 }
 
 #welcome-page {
-  margin: 100px auto;
+  margin: 200px auto 0 auto;
   width: 90%;
 }
 
@@ -66,11 +66,14 @@ header {
   justify-content: space-evenly;
 }
 #navbar {
+  position: fixed;
+  top: 0px;
   display: flex;
-  width: auto;
+  width: 100%;
   background-color: black;
-  text-align: center;
-  justify-content: center;
+  /* text-align: center; */
+  /* justify-content: center; */
+  z-index: 99;
 }
 .div-menu {
   width: 50%;
@@ -192,13 +195,6 @@ hr {
   border: 1px solid rgb(198, 151, 73);
 }
 
-.slider {
-  height: auto;
-  width: auto;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  margin: 20px 0;
-}
 #img-slider {
   width: 100%;
   height: auto;
@@ -206,9 +202,105 @@ hr {
 #img-slider img {
   width: 100%;
   height: 450px;
-  object-fit:cover;
+  object-fit: cover;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+#about {
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px auto;
+  text-align: center;
+}
+.about-header hr {
+  margin: auto;
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.card {
+  background-color: white;
+  width: 350px;
+  margin: 10px auto;
+  border-radius: 15px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  transition: all 400ms ease;
+}
+@media screen and (max-width: 370px) {
+  .card {
+    width: 300px;
+  }
+}
+.card:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%);
+}
+.card-image {
+  height: 250px;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+}
+.img1 {
+  background-image: url(/images/salon.jpg);
+}
+
+.img2 {
+  background-image: url(/images/services.jpg);
+}
+
+.img3 {
+  background-image: url(/images/login.jpg);
+}
+.card h2 {
+  padding: 10px;
+}
+.card p {
+  padding: 10px;
+}
+
+#us {
+  width: 90%;
+  height: 700px;
+  background-color: rgba(198, 151, 73, 0.2);
+  border-radius: 50px;
+  margin: 50px auto;
+}
+#circle {
+  position: relative;
+  height: 100%;
+  /* width: 100%; */
+}
+#circle:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  border-radius: 100% 50px 50px 0;
+  background-color: #c697494d;
+  z-index: -1;
+}
+.circle-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-top: 20px;
+  margin-bottom: 40px;
 }
 
 #services {
@@ -268,6 +360,45 @@ hr {
 #services > p {
   margin: 50px;
 }
+#works {
+  background-color: rgba(61, 63, 39, 0.1);
+}
+#works-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 20px;
+  /* margin-bottom: 40px; */
+  text-align: center;
+  /* height: 20%; */
+}
+#works-intro hr {
+  margin: auto;
+}
+
+/* EDW KEKINAEI TO SLIDER */
+.img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-box > img {
+  height: 500px;
+  width: 280px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+.slider_container .container {
+  padding: 0 15px;
+  max-width: 1430px;
+  margin: 0 auto;
+}
+.card_slider {
+  padding: 50px 0;
+}
+/* EDW TELEIWNEI TO SLIDER */
 
 #contact {
   display: flex;
@@ -435,7 +566,7 @@ i:hover {
     display: none;
   }
   #welcome-page {
-    margin: 10px auto;
+    margin: 150px auto;
   }
   #intro {
     width: 100%;
