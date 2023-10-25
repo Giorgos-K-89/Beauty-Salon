@@ -1,19 +1,17 @@
 * {
   padding: 0;
   margin: 0;
-  font-size: large;
   box-sizing: border-box;
   font-family: "Crimson Text", serif;
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: rgba(226, 219, 218, 0.8);
+  background-color: rgba(226, 219, 218, 0.4);
 }
 
 h1 {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 1.3rem;
 }
 
 h2 {
@@ -25,7 +23,9 @@ h3 {
   font-family: "Crimson Text", serif;
   color: rgb(198, 151, 73);
 }
-
+p {
+  font-size: 1.2rem;
+}
 a {
   cursor: pointer;
   text-decoration: none;
@@ -71,8 +71,6 @@ header {
   display: flex;
   width: 100%;
   background-color: black;
-  /* text-align: center; */
-  /* justify-content: center; */
   z-index: 99;
 }
 .div-menu {
@@ -88,11 +86,13 @@ header {
   width: auto;
 }
 .topnav {
+  margin: 0 auto;
   display: flex;
   align-items: center;
+  gap: 30px;
   justify-content: space-evenly;
   overflow: hidden;
-  width: 100%;
+  width: 90%;
 }
 
 #nav-container a:not(:last-child) {
@@ -123,8 +123,6 @@ header {
 .div-menu,
 .appointment {
   display: none;
-  /* display: flex;
-  align-items: center; */
 }
 @media screen and (max-width: 768px) {
   .topnav a:not(:first-child) {
@@ -157,8 +155,6 @@ header {
 .rantevou {
   background-color: rgb(198, 151, 73);
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
   width: 20%;
   transform: skew(-40deg);
@@ -271,36 +267,53 @@ hr {
 }
 
 #us {
-  width: 90%;
-  height: 700px;
-  background-color: rgba(198, 151, 73, 0.2);
+  border: 3px solid rgb(198, 151, 73);
+  padding: 50px;
+  width: 80%;
+  height: auto;
   border-radius: 50px;
   margin: 50px auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 100px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
-#circle {
-  position: relative;
-  height: 100%;
-  /* width: 100%; */
+
+#us-image {
+  width: 100%;
+  height: auto;
 }
-#circle:after {
-  position: absolute;
-  content: "";
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 50%;
-  border-radius: 100% 50px 50px 0;
-  background-color: #c697494d;
-  z-index: -1;
+#us-image img {
+  border: 2px solid rgb(198, 151, 73);
+  border-radius: 50px;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
+
 .circle-intro {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 30px;
   padding-top: 20px;
-  margin-bottom: 40px;
+}
+#us button {
+  width: 340px;
+}
+@media only screen and (max-width: 1024px) {
+  #us {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  #us button {
+    width: auto;
+  }
 }
 
 #services {
@@ -315,7 +328,6 @@ hr {
   gap: 40px;
   padding-top: 20px;
   margin-bottom: 40px;
-  /* height: 20%; */
 }
 .services-intro hr {
   margin: auto;
@@ -361,7 +373,11 @@ hr {
   margin: 50px;
 }
 #works {
-  background-color: rgba(61, 63, 39, 0.1);
+  background-color: rgba(40, 42, 58);
+  padding: 20px;
+}
+#works h1 {
+  color: rgb(198, 151, 73);
 }
 #works-intro {
   display: flex;
@@ -369,9 +385,7 @@ hr {
   justify-content: center;
   gap: 40px;
   padding-top: 20px;
-  /* margin-bottom: 40px; */
   text-align: center;
-  /* height: 20%; */
 }
 #works-intro hr {
   margin: auto;
@@ -442,7 +456,7 @@ hr {
   margin: 0 auto 30px auto;
 }
 
-#rantevouBtn {
+.rantevouBtn {
   font-size: 0.8rem;
   font-weight: 200;
   letter-spacing: 1px;
@@ -457,7 +471,7 @@ hr {
   touch-action: manipulation;
 }
 
-#rantevouBtn:after {
+.rantevouBtn:after {
   content: "";
   background-color: rgb(198, 151, 73);
   width: 100%;
@@ -469,17 +483,17 @@ hr {
   transition: 0.2s;
 }
 
-#rantevouBtn:hover:after {
+.rantevouBtn:hover:after {
   top: 0px;
   left: 0px;
 }
-#rantevouBtn a {
+.rantevouBtn a {
   color: black;
   font-size: 0.9rem;
 }
 
 @media (min-width: 768px) {
-  #rantevouBtn {
+  .rantevouBtn {
     padding: 13px 50px 13px;
   }
 }
@@ -499,11 +513,12 @@ hr {
 }
 
 #footer {
-  /* height: 150px; */
+  height: auto;
   display: flex;
   align-items: center;
   background-color: black;
   justify-content: space-around;
+  padding-bottom: 10px;
 }
 
 .footer-flex {
