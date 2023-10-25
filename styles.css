@@ -253,15 +253,15 @@ hr {
   border-radius: 15px 15px 0 0;
 }
 .img1 {
-  background-image: url(/images/salon.jpg);
+  background-image: url(images/salon.jpg);
 }
 
 .img2 {
-  background-image: url(/images/services.jpg);
+  background-image: url(images/services.jpg);
 }
 
 .img3 {
-  background-image: url(/images/login.jpg);
+  background-image: url(images/login.jpg);
 }
 .card h2 {
   padding: 10px;
