@@ -35,6 +35,8 @@ a {
 
 .brand {
   color: rgb(198, 151, 73);
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .hover-animation::after {
