@@ -191,7 +191,7 @@ hr {
   width: 100px;
   border: 1px solid rgb(198, 151, 73);
 }
-
+/* ------------KWDIKAS GIA TO SLIDER------------------ */
 #img-slider {
   width: 100%;
   height: auto;
@@ -203,6 +203,15 @@ hr {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
+#slider {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+#slider.fadeOut {
+  opacity: 0;
+}
+/* ------------KWDIKAS GIA TO SLIDER------------------ */
 #about {
   margin: 100px auto;
   display: flex;
