@@ -88,3 +88,55 @@ var swiper = new Swiper(".card_slider", {
     },
   },
 });
+//
+//
+// JavaScript for dynamically adding team members
+const teamData = [
+  {
+    name: "John Doe",
+    role: "Hair Stylist",
+    image: "images/team/avatar1.jpg",
+  },
+  {
+    name: "Jane Smith",
+    role: "Makeup Artist",
+    image: "images/team/avatar2.jpg",
+  },
+  {
+    name: "Jane Smith",
+    role: "Makeup Artist",
+    image: "images/team/avatar3.jpg",
+  },
+  {
+    name: "Jane Smith",
+    role: "Makeup Artist",
+    image: "images/team/avatar4.jpg",
+  },
+
+  // Add more team members here
+];
+
+const teamSection = document.getElementById("team-members");
+
+// Loop through the team data and create elements dynamically
+teamData.forEach((member) => {
+  const memberDiv = document.createElement("div");
+  memberDiv.classList.add("team-member");
+
+  const image = document.createElement("img");
+  image.src = member.image;
+  image.alt = member.name;
+
+  const name = document.createElement("p");
+  name.textContent = member.name;
+  name.style.fontWeight = "bold";
+
+  const role = document.createElement("p");
+  role.textContent = member.role;
+
+  memberDiv.appendChild(image);
+  memberDiv.appendChild(name);
+  memberDiv.appendChild(role);
+
+  teamSection.appendChild(memberDiv);
+});
