@@ -5,6 +5,14 @@
   font-family: "Crimson Text", serif;
   scroll-behavior: smooth;
 }
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 body {
   background-color: rgba(226, 219, 218, 0.4);
@@ -203,6 +211,7 @@ hr {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
+
 #slider {
   opacity: 1;
   transition: opacity 1s;
@@ -455,11 +464,11 @@ hr {
   flex-wrap: wrap;
 }
 .team-member {
+  color: rgb(40, 42, 58);
   position: relative;
   width: 250px;
   margin: 20px;
   text-align: center;
-  background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
   padding: 20px;
@@ -504,6 +513,12 @@ hr {
 }
 .team-member:hover img {
   transform: scale(1.1);
+}
+#team-members i {
+  color: rgb(40, 42, 58);
+}
+#team-members i:hover {
+  color: white;
 }
 /*------------------ H OMADA MAS -------------------*/
 

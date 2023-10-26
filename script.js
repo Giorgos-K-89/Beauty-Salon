@@ -1,3 +1,5 @@
+// slider--------------------
+
 var imgArray = [
     "images/woman-1.jpg",
     "images/woman-2.jpg",
@@ -20,10 +22,11 @@ function slideShow() {
   setTimeout(slideShow, imgDuration);
 }
 slideShow();
+// slider--------------------
 //
 //
 //
-//
+//button back to top
 let mybutton = document.getElementById("myBtn");
 
 window.onscroll = function () {
@@ -42,7 +45,7 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-//
+//navbar - responsive
 function myFunction() {
   var x = document.getElementById("nav-container");
   if (x.className === "topnav") {
@@ -95,26 +98,37 @@ var swiper = new Swiper(".card_slider", {
 // JavaScript for dynamically adding team members
 const teamData = [
   {
-    name: "John Doe",
+    name: "Maria",
     role: "Hair Stylist",
     image: "images/team/avatar1.jpg",
+    facebook: "facebook_link",
+    twitter: "twitter_link",
+    instagram: "instagram_link",
   },
   {
-    name: "Jane Smith",
-    role: "Makeup Artist",
+    name: "Konstantinos",
+    role: "Hair Specialist",
     image: "images/team/avatar2.jpg",
+    facebook: "facebook_link",
+    twitter: "twitter_link",
+    instagram: "instagram_link",
   },
   {
-    name: "Jane Smith",
+    name: "Giorgos",
     role: "Makeup Artist",
     image: "images/team/avatar3.jpg",
+    facebook: "facebook_link",
+    twitter: "twitter_link",
+    instagram: "instagram_link",
   },
   {
-    name: "Jane Smith",
-    role: "Makeup Artist",
+    name: "Eleni",
+    role: "Nail Artist",
     image: "images/team/avatar4.jpg",
+    facebook: "facebook_link",
+    twitter: "twitter_link",
+    instagram: "instagram_link",
   },
-
   // Add more team members here
 ];
 
@@ -135,10 +149,32 @@ teamData.forEach((member) => {
 
   const role = document.createElement("p");
   role.textContent = member.role;
+  // AN LEIPEI KAPOIO SOCIAL NA MH FTIAXNEI ICON
+  const buttons = document.createElement("div");
+  buttons.classList.add("buttons");
+  if (member.facebook !== "") {
+    buttons.innerHTML = `
+        <a class="button button1" href="${member.facebook}"><i class="fa-brands fa-facebook-f fa-lg"></i></a>`;
+  }
+  if (member.twitter !== "") {
+    buttons.innerHTML += `
+        <a class="button button2" href="${member.twitter}"><i class="fa-brands fa-twitter fa-lg"></i></a>`;
+  }
+  if (member.instagram !== "") {
+    buttons.innerHTML += `
+        <a class="button button3" href="${member.instagram}"><i class="fa-brands fa-instagram fa-lg"></i></a>`;
+  }
 
+  // buttons.innerHTML = `
+  //       <a class="button button1" href="${member.facebook}"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
+  //       <a class="button button2" href="${member.twitter}"><i class="fa-brands fa-twitter fa-lg"></i></a>
+  //       <a class="button button3" href="${member.instagram}"><i class="fa-brands fa-instagram fa-lg"></i></a>
+  //     `;
+  // AN LEIPEI KAPOIO SOCIAL NA MH FTIAXNEI ICON
   memberDiv.appendChild(image);
   memberDiv.appendChild(name);
   memberDiv.appendChild(role);
+  memberDiv.appendChild(buttons);
 
   teamSection.appendChild(memberDiv);
 });
