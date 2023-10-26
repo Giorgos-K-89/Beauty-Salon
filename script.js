@@ -1,4 +1,4 @@
-// slider--------------------
+// ------slider--------------------
 
 var imgArray = [
     "images/woman-1.jpg",
@@ -22,7 +22,7 @@ function slideShow() {
   setTimeout(slideShow, imgDuration);
 }
 slideShow();
-// slider--------------------
+// -------slider--------------------
 //
 //
 //
@@ -45,6 +45,8 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+//
+//
 //navbar - responsive
 function myFunction() {
   var x = document.getElementById("nav-container");
@@ -55,8 +57,44 @@ function myFunction() {
   }
 }
 //
-//KEKINAEI TO SWIPER//
-var swiper = new Swiper(".card_slider", {
+//Carousel gia to Services me Swiper Js
+var swiper1 = new Swiper(".swiper", {
+  // slidesPerView: 4,
+  spaceBetween: 10,
+  loop: true,
+  speed: 1000,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    425: {
+      slidesPerView: 1,
+    },
+    480: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
+//Carousel gia to Services me Swiper Js--TELOS
+//
+//
+//Carousel gia to photo album sto WORKS me Swiper Js
+var swiper2 = new Swiper(".card_slider", {
   // autoHeight: true,
   centeredSlides: true,
   spaceBetween: 30,
@@ -93,9 +131,10 @@ var swiper = new Swiper(".card_slider", {
     },
   },
 });
+//Carousel gia to photo album sto WORKS me Swiper Js--TELOS
 //
 //
-// JavaScript for dynamically adding team members
+//Dynamically adding team members
 const teamData = [
   {
     name: "Maria",
@@ -129,12 +168,13 @@ const teamData = [
     twitter: "twitter_link",
     instagram: "instagram_link",
   },
+
   // Add more team members here
 ];
 
 const teamSection = document.getElementById("team-members");
 
-// Loop through the team data and create elements dynamically
+// Loop sto team gia na ftiaxnei ta HTML Elements
 teamData.forEach((member) => {
   const memberDiv = document.createElement("div");
   memberDiv.classList.add("team-member");
@@ -164,12 +204,6 @@ teamData.forEach((member) => {
     buttons.innerHTML += `
         <a class="button button3" href="${member.instagram}"><i class="fa-brands fa-instagram fa-lg"></i></a>`;
   }
-
-  // buttons.innerHTML = `
-  //       <a class="button button1" href="${member.facebook}"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
-  //       <a class="button button2" href="${member.twitter}"><i class="fa-brands fa-twitter fa-lg"></i></a>
-  //       <a class="button button3" href="${member.instagram}"><i class="fa-brands fa-instagram fa-lg"></i></a>
-  //     `;
   // AN LEIPEI KAPOIO SOCIAL NA MH FTIAXNEI ICON
   memberDiv.appendChild(image);
   memberDiv.appendChild(name);
