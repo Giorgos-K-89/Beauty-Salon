@@ -1,23 +1,25 @@
-var img = document.getElementById("img-slider");
+var imgArray = [
+    "images/woman-1.jpg",
+    "images/woman-2.jpg",
+    "images/woman-3.jpg",
+    "images/woman-4.jpg",
+  ],
+  curIndex = 0;
+imgDuration = 4000;
 
-var slides = [
-  "./images/woman-1.jpg",
-  "./images/woman-2.jpg",
-  "./images/woman-3.jpg",
-  "./images/woman-4.jpg",
-];
-
-var start = 0;
-
-function slider() {
-  if (start < slides.length) {
-    start = start + 1;
-  } else {
-    start = 1;
+function slideShow() {
+  document.getElementById("slider").className += "fadeOut";
+  setTimeout(function () {
+    document.getElementById("slider").src = imgArray[curIndex];
+    document.getElementById("slider").className = "";
+  }, 700);
+  curIndex++;
+  if (curIndex == imgArray.length) {
+    curIndex = 0;
   }
-  img.innerHTML = "<img src=" + slides[start - 1] + ">";
+  setTimeout(slideShow, imgDuration);
 }
-setInterval(slider, 3000);
+slideShow();
 //
 //
 //
