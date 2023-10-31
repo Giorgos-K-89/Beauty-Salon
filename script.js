@@ -1,27 +1,27 @@
 // ------slider--------------------
 
-var imgArray = [
-    "images/woman-1.jpg",
-    "images/woman-2.jpg",
-    "images/woman-3.jpg",
-    "images/woman-4.jpg",
-  ],
-  curIndex = 0;
-imgDuration = 4000;
+// var imgArray = [
+//     "images/woman-1.jpg",
+//     "images/woman-2.jpg",
+//     "images/woman-3.jpg",
+//     "images/woman-4.jpg",
+//   ],
+//   curIndex = 0;
+// imgDuration = 4000;
 
-function slideShow() {
-  document.getElementById("slider").className += "fadeOut";
-  setTimeout(function () {
-    document.getElementById("slider").src = imgArray[curIndex];
-    document.getElementById("slider").className = "";
-  }, 700);
-  curIndex++;
-  if (curIndex == imgArray.length) {
-    curIndex = 0;
-  }
-  setTimeout(slideShow, imgDuration);
-}
-slideShow();
+// function slideShow() {
+//   document.getElementById("slider").className += "fadeOut";
+//   setTimeout(function () {
+//     document.getElementById("slider").src = imgArray[curIndex];
+//     document.getElementById("slider").className = "";
+//   }, 700);
+//   curIndex++;
+//   if (curIndex == imgArray.length) {
+//     curIndex = 0;
+//   }
+//   setTimeout(slideShow, imgDuration);
+// }
+// slideShow();
 // -------slider--------------------
 //
 //
@@ -58,15 +58,15 @@ function myFunction() {
 }
 //
 //Carousel gia to Services me Swiper Js
-var swiper1 = new Swiper(".swiper", {
+var swiper1 = new Swiper(".swiper1", {
   // slidesPerView: 4,
   spaceBetween: 10,
   loop: true,
   speed: 1000,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
   autoplay: {
     delay: 2000,
     disableOnInteraction: false,
@@ -94,18 +94,18 @@ var swiper1 = new Swiper(".swiper", {
 //
 //
 //Carousel gia to photo album sto WORKS me Swiper Js
-var swiper2 = new Swiper(".card_slider", {
+var swiper2 = new Swiper(".swiper2", {
   // autoHeight: true,
   centeredSlides: true,
-  spaceBetween: 30,
+  spaceBetween: 10,
   loop: true,
-  speed: 1000,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+  speed: 1500,
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
   autoplay: {
-    delay: 2000,
+    delay: 3000,
     disableOnInteraction: false,
   },
 
@@ -125,9 +125,6 @@ var swiper2 = new Swiper(".card_slider", {
     },
     1024: {
       slidesPerView: 3,
-    },
-    1200: {
-      slidesPerView: 4,
     },
   },
 });

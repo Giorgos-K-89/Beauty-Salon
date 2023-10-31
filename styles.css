@@ -166,23 +166,7 @@ header {
 }
 
 .rantevou {
-   background-color: rgb(198, 151, 73);
-  /*background: radial-gradient(
-      ellipse farthest-corner at right bottom,
-      #fedb37 0%,
-      #fdb931 8%,
-      #9f7928 30%,
-      #8a6e2f 40%,
-      transparent 80%
-    ),
-    radial-gradient(
-      ellipse farthest-corner at left top,
-      #ffffff 0%,
-      #ffffac 8%,
-      #d1b464 25%,
-      #5d4a1f 62.5%,
-      #5d4a1f 100%
-    ); */
+  background-color: rgb(198, 151, 73);
   display: flex;
   height: 100%;
   width: 20%;
@@ -258,16 +242,19 @@ hr {
   margin: auto;
 }
 .card-container {
+  width: 100%;
+  height: auto;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 40px;
 }
 
 .card {
   background-color: white;
   width: 350px;
-  margin: 10px auto;
+  margin: 10px;
   border-radius: 15px;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
   transition: all 400ms ease;
